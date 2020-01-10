@@ -17,10 +17,10 @@ ALTER TABLE [Sales].[Orders]
     ADD CONSTRAINT [Def_Orders_Status] DEFAULT 'O' FOR [Status];
 GO
 ALTER TABLE [Sales].[Orders]  
-    ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '01/03/2020'));
+    ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '03/01/2020'));
 GO
 ALTER TABLE [Sales].[Orders]  
-    ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2020') and (OrderDate < '01/03/2020'));
+    ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2020') and (OrderDate < '03/01/2020'));
 GO
 ALTER TABLE [Sales].[Orders]  
     ADD CONSTRAINT [PK_Orders_OrderID] PRIMARY KEY CLUSTERED ([OrderID] ASC) WITH (ALLOW_PAGE_LOCKS = ON, ALLOW_ROW_LOCKS = ON, PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF);

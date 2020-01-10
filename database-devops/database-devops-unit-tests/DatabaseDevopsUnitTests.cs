@@ -40,19 +40,21 @@ namespace database_devops_unit_tests
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Sales_uspCreateNewCustomerTest_TestAction;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatabaseDevopsUnitTests));
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Sales_uspPlaceNewOrderTest_TestAction;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.InconclusiveCondition inconclusiveCondition2;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Sales_uspShowOrderDetailsTest_TestAction;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.InconclusiveCondition inconclusiveCondition3;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountConditionCreateNewCustomer;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition scalarValueConditionPlaceNewOrder;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Sales_uspPlaceNewOrderTest_PretestAction;
             this.Sales_uspCreateNewCustomerTestData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
             this.Sales_uspPlaceNewOrderTestData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
             this.Sales_uspShowOrderDetailsTestData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
             Sales_uspCreateNewCustomerTest_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             Sales_uspPlaceNewOrderTest_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
-            inconclusiveCondition2 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.InconclusiveCondition();
             Sales_uspShowOrderDetailsTest_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             inconclusiveCondition3 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.InconclusiveCondition();
             rowCountConditionCreateNewCustomer = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
+            scalarValueConditionPlaceNewOrder = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition();
+            Sales_uspPlaceNewOrderTest_PretestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             // 
             // Sales_uspCreateNewCustomerTest_TestAction
             // 
@@ -61,13 +63,8 @@ namespace database_devops_unit_tests
             // 
             // Sales_uspPlaceNewOrderTest_TestAction
             // 
-            Sales_uspPlaceNewOrderTest_TestAction.Conditions.Add(inconclusiveCondition2);
+            Sales_uspPlaceNewOrderTest_TestAction.Conditions.Add(scalarValueConditionPlaceNewOrder);
             resources.ApplyResources(Sales_uspPlaceNewOrderTest_TestAction, "Sales_uspPlaceNewOrderTest_TestAction");
-            // 
-            // inconclusiveCondition2
-            // 
-            inconclusiveCondition2.Enabled = true;
-            inconclusiveCondition2.Name = "inconclusiveCondition2";
             // 
             // Sales_uspShowOrderDetailsTest_TestAction
             // 
@@ -88,7 +85,7 @@ namespace database_devops_unit_tests
             // Sales_uspPlaceNewOrderTestData
             // 
             this.Sales_uspPlaceNewOrderTestData.PosttestAction = null;
-            this.Sales_uspPlaceNewOrderTestData.PretestAction = null;
+            this.Sales_uspPlaceNewOrderTestData.PretestAction = Sales_uspPlaceNewOrderTest_PretestAction;
             this.Sales_uspPlaceNewOrderTestData.TestAction = Sales_uspPlaceNewOrderTest_TestAction;
             // 
             // Sales_uspShowOrderDetailsTestData
@@ -103,6 +100,20 @@ namespace database_devops_unit_tests
             rowCountConditionCreateNewCustomer.Name = "rowCountConditionCreateNewCustomer";
             rowCountConditionCreateNewCustomer.ResultSet = 1;
             rowCountConditionCreateNewCustomer.RowCount = 1;
+            // 
+            // scalarValueConditionPlaceNewOrder
+            // 
+            scalarValueConditionPlaceNewOrder.ColumnNumber = 1;
+            scalarValueConditionPlaceNewOrder.Enabled = true;
+            scalarValueConditionPlaceNewOrder.ExpectedValue = "100";
+            scalarValueConditionPlaceNewOrder.Name = "scalarValueConditionPlaceNewOrder";
+            scalarValueConditionPlaceNewOrder.NullExpected = false;
+            scalarValueConditionPlaceNewOrder.ResultSet = 1;
+            scalarValueConditionPlaceNewOrder.RowNumber = 1;
+            // 
+            // Sales_uspPlaceNewOrderTest_PretestAction
+            // 
+            resources.ApplyResources(Sales_uspPlaceNewOrderTest_PretestAction, "Sales_uspPlaceNewOrderTest_PretestAction");
         }
 
         #endregion
