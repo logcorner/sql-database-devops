@@ -122,11 +122,13 @@
 DECLARE @RC AS INT, @CustomerName AS NVARCHAR (40);
 
 SELECT @RC = 0,
-       @CustomerName = NULL;
+       @CustomerName = 'William';
 
 EXECUTE @RC = [Sales].[uspCreateNewCustomer] @CustomerName;
 
-SELECT @RC AS RC;
+SELECT * FROM [Sales].[Customer] WHERE CustomerName = @CustomerName;
+
+
 
 </value>
   </data>
