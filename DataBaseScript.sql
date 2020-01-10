@@ -68,7 +68,10 @@ GO
 ALTER TABLE [Sales].[Orders]  
     ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2020') and (OrderDate < '01/03/2020'));  
 GO  
-
+/*
+uspCreateNewCustomer - This stored procedure adds a record to the Customer table,
+which sets the customer's YTDOrders and YTDSales columns to zero.
+*/
 
 PRINT N'Creating Sales.uspCreateNewCustomer...';  
 GO  
@@ -80,6 +83,11 @@ INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);
 SELECT SCOPE_IDENTITY()  
 END  
 GO  
+/*
+uspPlaceNewOrder - This stored procedure adds a record to the Orders table for
+the specified customer and updates the YTDOrders value on the corresponding 
+record in the Customer table.
+*/
 PRINT N'Creating Sales.uspPlaceNewOrder...';  
 GO  
 CREATE PROCEDURE [Sales].[uspPlaceNewOrder]  
@@ -98,6 +106,13 @@ UPDATE [Sales].[Customer]
 COMMIT TRANSACTION  
 RETURN @RC  
 END  
+GO  
+/*
+uspShowOrderDetails - This stored procedure joins the Orders table 
+with the Custom table and shows the records for a specific customer.
+
+*/
+PRINT N'Creating Sales.uspShowOrderDetails...';  
 GO  
 CREATE PROCEDURE [Sales].[uspShowOrderDetails]  
 @CustomerID INT=0  
