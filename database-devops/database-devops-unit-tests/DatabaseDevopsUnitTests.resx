@@ -155,17 +155,66 @@ SELECT @RC = [YTDOrders] FROM [Sales].[Customer] WHERE [CustomerID] = @CustomerI
 
 SELECT @RC AS RC</value>
   </data>
+  <metadata name="expectedSchemaCondition1.Configuration" xml:space="preserve">
+    <value>Press to configure</value>
+  </metadata>
+  <data name="expectedSchemaCondition1.Schema" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAE5TeXN0ZW0uRGF0YSwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJl
+        PW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAABNTeXN0ZW0uRGF0YS5E
+        YXRhU2V0AwAAABdEYXRhU2V0LlJlbW90aW5nVmVyc2lvbglYbWxTY2hlbWELWG1sRGlmZkdyYW0DAQEO
+        U3lzdGVtLlZlcnNpb24CAAAACQMAAAAGBAAAAMkKPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0i
+        dXRmLTE2Ij8+DQo8eHM6c2NoZW1hIGlkPSJOZXdEYXRhU2V0IiB4bWxucz0iIiB4bWxuczp4cz0iaHR0
+        cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOm1zZGF0YT0idXJuOnNjaGVtYXMtbWlj
+        cm9zb2Z0LWNvbTp4bWwtbXNkYXRhIj4NCiAgPHhzOmVsZW1lbnQgbmFtZT0iTmV3RGF0YVNldCIgbXNk
+        YXRhOklzRGF0YVNldD0idHJ1ZSIgbXNkYXRhOkxvY2FsZT0iZW4tVVMiPg0KICAgIDx4czpjb21wbGV4
+        VHlwZT4NCiAgICAgIDx4czpjaG9pY2UgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZCI+
+        DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9IlRhYmxlIj4NCiAgICAgICAgICA8eHM6Y29tcGxleFR5
+        cGU+DQogICAgICAgICAgICA8eHM6c2VxdWVuY2U+DQogICAgICAgICAgICAgIDx4czplbGVtZW50IG5h
+        bWU9IkN1c3RvbWVyTmFtZSIgdHlwZT0ieHM6c3RyaW5nIiBtc2RhdGE6dGFyZ2V0TmFtZXNwYWNlPSIi
+        IG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iQ29sdW1uMSIg
+        dHlwZT0ieHM6ZGF0ZVRpbWUiIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAv
+        Pg0KICAgICAgICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJDb2x1bW4yIiB0eXBlPSJ4czpkYXRlVGlt
+        ZSIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgICAgICAg
+        IDx4czplbGVtZW50IG5hbWU9IlN0YXR1cyIgdHlwZT0ieHM6c3RyaW5nIiBtc2RhdGE6dGFyZ2V0TmFt
+        ZXNwYWNlPSIiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0i
+        QW1vdW50IiB0eXBlPSJ4czppbnQiIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIw
+        IiAvPg0KICAgICAgICAgICAgPC94czpzZXF1ZW5jZT4NCiAgICAgICAgICA8L3hzOmNvbXBsZXhUeXBl
+        Pg0KICAgICAgICA8L3hzOmVsZW1lbnQ+DQogICAgICAgIDx4czplbGVtZW50IG5hbWU9IlRhYmxlMSI+
+        DQogICAgICAgICAgPHhzOmNvbXBsZXhUeXBlPg0KICAgICAgICAgICAgPHhzOnNlcXVlbmNlPg0KICAg
+        ICAgICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJSQyIgdHlwZT0ieHM6aW50IiBtc2RhdGE6dGFyZ2V0
+        TmFtZXNwYWNlPSIiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgICAgIDwveHM6c2VxdWVuY2U+DQog
+        ICAgICAgICAgPC94czpjb21wbGV4VHlwZT4NCiAgICAgICAgPC94czplbGVtZW50Pg0KICAgICAgPC94
+        czpjaG9pY2U+DQogICAgPC94czpjb21wbGV4VHlwZT4NCiAgPC94czplbGVtZW50Pg0KPC94czpzY2hl
+        bWE+BgUAAACAATxkaWZmZ3I6ZGlmZmdyYW0geG1sbnM6bXNkYXRhPSJ1cm46c2NoZW1hcy1taWNyb3Nv
+        ZnQtY29tOnhtbC1tc2RhdGEiIHhtbG5zOmRpZmZncj0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp4
+        bWwtZGlmZmdyYW0tdjEiIC8+BAMAAAAOU3lzdGVtLlZlcnNpb24EAAAABl9NYWpvcgZfTWlub3IGX0J1
+        aWxkCV9SZXZpc2lvbgAAAAAICAgIAgAAAAAAAAD//////////ws=
+</value>
+  </data>
+  <metadata name="checksumCondition1.Configuration" xml:space="preserve">
+    <value>Press to configure</value>
+  </metadata>
   <data name="Sales_uspShowOrderDetailsTest_TestAction.SqlScript" xml:space="preserve">
-    <value>-- database unit test for Sales.uspShowOrderDetails
-DECLARE @RC AS INT, @CustomerID AS INT;
+    <value>-- unit test for Sales.uspShowOrderDetails  
+DECLARE @RC AS INT, @CustomerID AS INT, @Amount AS INT, @FilledDate AS DATETIME, @Status AS CHAR (1);  
+DECLARE @CustomerName AS NVARCHAR(40), @OrderID AS INT;  
 
-SELECT @RC = 0,
-       @CustomerID = 0;
+SELECT @RC = 0,  
+       @CustomerID = 0,  
+       @OrderID = 0,  
+       @CustomerName = N'Fictitious Customer',  
+       @Amount = 100,  
+       @FilledDate = getdate(),  
+       @Status = 'O';  
 
-EXECUTE @RC = [Sales].[uspShowOrderDetails] @CustomerID;
+-- NOTE: Assumes that you inserted a Customer record with CustomerName='Fictitious Customer' in the pre-test script.  
+SELECT @CustomerID = [CustomerID] FROM [Sales].[Customer] WHERE [CustomerName] = @CustomerName;  
+
+-- fill an order for that customer  
+EXECUTE @RC = [Sales].[uspShowOrderDetails] @CustomerID;  
 
 SELECT @RC AS RC;
-
 </value>
   </data>
   <data name="Sales_uspPlaceNewOrderTest_PretestAction.SqlScript" xml:space="preserve">
@@ -192,6 +241,46 @@ SELECT @CustomerID = [CustomerID] FROM [Sales].[Customer] WHERE [CustomerName] =
 -- delete any old records in the Orders table and clear out the YTD Sales/Orders fields  
 DELETE from [Sales].[Orders] WHERE [CustomerID] = @CustomerID;  
 UPDATE [Sales].[Customer] SET YTDOrders = 0, YTDSales = 0 WHERE [CustomerID] = @CustomerID;</value>
+  </data>
+  <data name="Sales_uspShowOrderDetailsTest_PretestAction.SqlScript" xml:space="preserve">
+    <value>/*  
+Add Transact-SQL statements here to run before the test script is run.  
+*/  
+BEGIN TRANSACTION  
+
+-- Add a customer for this test with the name 'FictitiousCustomer'  
+DECLARE @NewCustomerID AS INT, @RC AS INT, @CustomerName AS NVARCHAR (40);  
+
+SELECT @RC = 0,  
+       @NewCustomerID = 0,  
+       @CustomerName = N'Fictitious Customer';  
+
+IF NOT EXISTS(SELECT * FROM [Sales].[Customer] WHERE CustomerName = @CustomerName)  
+BEGIN  
+EXECUTE @NewCustomerID = [Sales].[uspNewCustomer] @CustomerName;  
+END  
+
+DECLARE @CustomerID AS INT, @Amount AS INT, @OrderDate AS DATETIME, @Status AS CHAR (1);  
+
+SELECT @RC = 0,  
+       @CustomerID = 0,  
+       @CustomerName = N'Fictitious Customer',  
+       @OrderDate = getdate(),  
+       @Status = 'O';  
+
+-- NOTE: Assumes that you inserted a Customer record with CustomerName='Fictitious Customer' in the pre-test script.  
+SELECT @CustomerID = [CustomerID] FROM [Sales].[Customer] WHERE [CustomerName] = @CustomerName;  
+
+-- delete any old records in the Orders table and clear out the YTD Sales/Orders fields  
+DELETE from [Sales].[Orders] WHERE [CustomerID] = @CustomerID;  
+UPDATE [Sales].[Customer] SET YTDOrders = 0, YTDSales = 0 WHERE [CustomerID] = @CustomerID;  
+
+-- place 3 orders for that customer  
+EXECUTE @RC = [Sales].[uspPlaceNewOrder] @CustomerID, 100, @OrderDate, @Status;  
+EXECUTE @RC = [Sales].[uspPlaceNewOrder] @CustomerID, 50, @OrderDate, @Status;  
+EXECUTE @RC = [Sales].[uspPlaceNewOrder] @CustomerID, 5, @OrderDate, @Status;  
+
+COMMIT TRANSACTION</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
