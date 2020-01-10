@@ -1,1 +1,1 @@
-# sql-database-devops
+# sql-database-azure devops
