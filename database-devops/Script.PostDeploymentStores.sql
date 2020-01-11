@@ -9,8 +9,7 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-USE [database-devops]
-GO
+
 INSERT [Sales].[Store] ([StoreID], [Name], [ModifiedDate]) VALUES (292, N'Next-Door Bike Store', CAST(N'2014-09-12T11:15:07.497' AS DateTime))
 GO
 INSERT [Sales].[Store] ([StoreID], [Name], [ModifiedDate]) VALUES (294, N'Professional Sales and Service', CAST(N'2014-09-12T11:15:07.497' AS DateTime))
