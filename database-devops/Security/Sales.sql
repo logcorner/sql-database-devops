@@ -1,2 +1,3 @@
-﻿CREATE SCHEMA [Sales]  
+﻿CREATE SCHEMA [Sales]
     AUTHORIZATION [dbo];
+

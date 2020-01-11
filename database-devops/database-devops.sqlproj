@@ -71,5 +71,9 @@
     <Build Include="Sales\Stored Procedures\uspShowOrderDetails.sql" />
     <Build Include="Security\Sales.sql" />
     <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+    <Build Include="Sales\Tables\Store.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeploymentStores.sql" />
   </ItemGroup>
 </Project>
