@@ -116,6 +116,10 @@ namespace database_devops_unit_tests
             // 
             resources.ApplyResources(Sales_uspShowOrderDetailsTest_PretestAction, "Sales_uspShowOrderDetailsTest_PretestAction");
             // 
+            // Sales_uspCreateNewCustomerTest_PretestAction
+            // 
+            resources.ApplyResources(Sales_uspCreateNewCustomerTest_PretestAction, "Sales_uspCreateNewCustomerTest_PretestAction");
+            // 
             // Sales_uspCreateNewCustomerTestData
             // 
             this.Sales_uspCreateNewCustomerTestData.PosttestAction = null;
@@ -133,10 +137,6 @@ namespace database_devops_unit_tests
             this.Sales_uspShowOrderDetailsTestData.PosttestAction = null;
             this.Sales_uspShowOrderDetailsTestData.PretestAction = Sales_uspShowOrderDetailsTest_PretestAction;
             this.Sales_uspShowOrderDetailsTestData.TestAction = Sales_uspShowOrderDetailsTest_TestAction;
-            // 
-            // Sales_uspCreateNewCustomerTest_PretestAction
-            // 
-            resources.ApplyResources(Sales_uspCreateNewCustomerTest_PretestAction, "Sales_uspCreateNewCustomerTest_PretestAction");
         }
 
         #endregion

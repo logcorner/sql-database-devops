@@ -158,6 +158,35 @@ SELECT @RC AS RC</value>
   <metadata name="expectedSchemaCondition1.Configuration" xml:space="preserve">
     <value>Press to configure</value>
   </metadata>
+  <metadata name="checksumCondition1.Configuration" xml:space="preserve">
+    <value>Press to configure</value>
+  </metadata>
+  <data name="Sales_uspShowOrderDetailsTest_TestAction.SqlScript" xml:space="preserve">
+    <value>
+-- unit test for Sales.uspShowOrderDetails  
+DECLARE @RC AS INT, @CustomerID AS INT, @Amount AS INT, @FilledDate AS DATETIME, @Status AS CHAR (1);  
+DECLARE @CustomerName AS NVARCHAR(40), @OrderID AS INT;  
+
+SELECT @RC = 0,  
+       @CustomerID = 0,  
+       @OrderID = 0,  
+       @CustomerName = N'Fictitious Customer',  
+       @Amount = 100,  
+       @FilledDate = getdate(),  
+       @Status = 'O';  
+
+-- NOTE: Assumes that you inserted a Customer record with CustomerName='Fictitious Customer' in the pre-test script.  
+SELECT @CustomerID = [CustomerID] FROM [Sales].[Customer] WHERE [CustomerName] = @CustomerName;  
+
+-- fill an order for that customer  
+EXECUTE @RC = [Sales].[uspShowOrderDetails] @CustomerID;  
+
+SELECT @RC AS RC;
+</value>
+  </data>
+  <metadata name="expectedSchemaCondition1.Configuration" xml:space="preserve">
+    <value>Press to configure</value>
+  </metadata>
   <data name="expectedSchemaCondition1.Schema" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAE5TeXN0ZW0uRGF0YSwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJl
@@ -195,41 +224,15 @@ SELECT @RC AS RC</value>
   <metadata name="checksumCondition1.Configuration" xml:space="preserve">
     <value>Press to configure</value>
   </metadata>
-  <data name="Sales_uspShowOrderDetailsTest_TestAction.SqlScript" xml:space="preserve">
-    <value>
--- unit test for Sales.uspShowOrderDetails  
-DECLARE @RC AS INT, @CustomerID AS INT, @Amount AS INT, @FilledDate AS DATETIME, @Status AS CHAR (1);  
-DECLARE @CustomerName AS NVARCHAR(40), @OrderID AS INT;  
-
-SELECT @RC = 0,  
-       @CustomerID = 0,  
-       @OrderID = 0,  
-       @CustomerName = N'Fictitious Customer',  
-       @Amount = 100,  
-       @FilledDate = getdate(),  
-       @Status = 'O';  
-
--- NOTE: Assumes that you inserted a Customer record with CustomerName='Fictitious Customer' in the pre-test script.  
-SELECT @CustomerID = [CustomerID] FROM [Sales].[Customer] WHERE [CustomerName] = @CustomerName;  
-
--- fill an order for that customer  
-EXECUTE @RC = [Sales].[uspShowOrderDetails] @CustomerID;  
-
-SELECT @RC AS RC;
-</value>
-  </data>
   <data name="Sales_uspPlaceNewOrderTest_PretestAction.SqlScript" xml:space="preserve">
     <value>/*  
 Add Transact-SQL statements here that you want to run before  
 the test script is run.  
 */  
 USE master;
-GO
 IF DB_ID (N'database-devops') IS  NULL
 CREATE DATABASE [database-devops];
-GO
-USE [database-devops]
-GO
+USE [database-devops];
 -- Add a customer for this test with the name 'Fictitious Customer'  
 DECLARE @NewCustomerID AS INT, @CustomerID AS INT, @RC AS INT, @CustomerName AS NVARCHAR (40);  
 
@@ -255,12 +258,9 @@ UPDATE [Sales].[Customer] SET YTDOrders = 0, YTDSales = 0 WHERE [CustomerID] = @
 Add Transact-SQL statements here to run before the test script is run.  
 */  
 USE master;
-GO
 IF DB_ID (N'database-devops') IS  NULL
 CREATE DATABASE [database-devops];
-GO
-USE [database-devops]
-GO
+USE [database-devops];
 
 BEGIN TRANSACTION  
 
@@ -300,12 +300,10 @@ COMMIT TRANSACTION</value>
   </data>
   <data name="Sales_uspCreateNewCustomerTest_PretestAction.SqlScript" xml:space="preserve">
     <value>USE master;
-GO
 IF DB_ID (N'database-devops') IS  NULL
 CREATE DATABASE [database-devops];
-GO
-USE [database-devops]
-GO</value>
+USE [database-devops];
+</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
