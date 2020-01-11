@@ -196,7 +196,8 @@ SELECT @RC AS RC</value>
     <value>Press to configure</value>
   </metadata>
   <data name="Sales_uspShowOrderDetailsTest_TestAction.SqlScript" xml:space="preserve">
-    <value>-- unit test for Sales.uspShowOrderDetails  
+    <value>
+-- unit test for Sales.uspShowOrderDetails  
 DECLARE @RC AS INT, @CustomerID AS INT, @Amount AS INT, @FilledDate AS DATETIME, @Status AS CHAR (1);  
 DECLARE @CustomerName AS NVARCHAR(40), @OrderID AS INT;  
 
@@ -222,6 +223,13 @@ SELECT @RC AS RC;
 Add Transact-SQL statements here that you want to run before  
 the test script is run.  
 */  
+USE master;
+GO
+IF DB_ID (N'database-devops') IS  NULL
+CREATE DATABASE [database-devops];
+GO
+USE [database-devops]
+GO
 -- Add a customer for this test with the name 'Fictitious Customer'  
 DECLARE @NewCustomerID AS INT, @CustomerID AS INT, @RC AS INT, @CustomerName AS NVARCHAR (40);  
 
@@ -246,6 +254,14 @@ UPDATE [Sales].[Customer] SET YTDOrders = 0, YTDSales = 0 WHERE [CustomerID] = @
     <value>/*  
 Add Transact-SQL statements here to run before the test script is run.  
 */  
+USE master;
+GO
+IF DB_ID (N'database-devops') IS  NULL
+CREATE DATABASE [database-devops];
+GO
+USE [database-devops]
+GO
+
 BEGIN TRANSACTION  
 
 -- Add a customer for this test with the name 'FictitiousCustomer'  
@@ -281,6 +297,15 @@ EXECUTE @RC = [Sales].[uspPlaceNewOrder] @CustomerID, 50, @OrderDate, @Status;
 EXECUTE @RC = [Sales].[uspPlaceNewOrder] @CustomerID, 5, @OrderDate, @Status;  
 
 COMMIT TRANSACTION</value>
+  </data>
+  <data name="Sales_uspCreateNewCustomerTest_PretestAction.SqlScript" xml:space="preserve">
+    <value>USE master;
+GO
+IF DB_ID (N'database-devops') IS  NULL
+CREATE DATABASE [database-devops];
+GO
+USE [database-devops]
+GO</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
